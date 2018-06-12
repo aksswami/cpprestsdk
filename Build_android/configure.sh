@@ -167,20 +167,11 @@ then
 	PATH="$PATH:$NDK_DIR" \
 	CXXFLAGS="-std=gnu++11" \
 	./build-android.sh \
-<<<<<<< HEAD
-		--boost=1.55.0 \
-		--arch=armeabi-v7a,x86 \
-		--with-libraries=atomic,random,date_time,filesystem,system,thread,chrono \
-		--without-supportlib \
-		--stl=gnustl_static \
-		--api=9 \
-=======
 		--boost=$BOOSTVER \
 		--arch=armeabi-v7a,x86 \
 		--with-libraries=atomic,random,date_time,filesystem,system,thread,chrono \
 		--api=$API \
 		--stl=$STL \
->>>>>>> 17149697d1c9e551c47bef0d0728d99dd7eb2158
 		"${NDK_DIR}" || exit 1
 )
 fi
